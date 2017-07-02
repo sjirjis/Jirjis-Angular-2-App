@@ -1,0 +1,64 @@
+<div class="container">
+
+	<div class="jumbotron">
+		<h1>{{name}}</h1>
+		<p><strong>Email: </strong>{{email}}</p>
+		<p><strong>Address: </strong>{{address.street}} {{address.city}}, {{address.state}} {{address.zip}}</p>
+	</div>
+
+	<br /><hr />
+
+	<h3>Edit User</h3>
+
+	<form class="form-horizontal">
+		<fieldset>
+			<div class="form-group">
+				<label class="col-lg-2 control-label">Name:</label>
+				<div class="col-lg-8">
+					<input type="text" name="name" class="form-control" [(ngModel)]="name"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-lg-2 control-label">Email:</label>
+				<div class="col-lg-8">
+					<input type="text" name="email" class="form-control" [(ngModel)]="email"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputEmail" class="col-lg-2 control-label">Street Address:</label>
+				<div class="col-lg-8">
+					<input type="text" name="address.street" class="form-control" [(ngModel)]="address.street"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputEmail" class="col-lg-2 control-label">City:</label>
+				<div class="col-lg-8">
+					<input type="text" name="address.city" class="form-control" [(ngModel)]="address.city"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputEmail" class="col-lg-2 control-label">State:</label>
+				<div class="col-lg-8">
+					<input type="text" name="address.state" class="form-control" [(ngModel)]="address.state"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputEmail" class="col-lg-2 control-label">Zip:</label>
+				<div class="col-lg-8">
+					<input type="text" name="address.zip" class="form-control" [(ngModel)]="address.zip"/>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+	<br /><hr />
+
+	<hobby></hobby>
+
+	<hr />
+</div>

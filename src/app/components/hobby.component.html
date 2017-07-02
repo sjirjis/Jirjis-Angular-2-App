@@ -1,0 +1,33 @@
+<h3>Hobbies</h3>
+<div class="col-lg-offset-2">
+	<button class="btn btn-success" (click)="toggleHobbies()">{{showHobbies ? "Hide Hobbies" : "Show Hobbies"}}</button>
+	<br /><br />
+	<div *ngIf="showHobbies">
+		<div class="row">
+		    <div class="col-lg-8">
+				<ul class="list-group">
+				    <li class="list-group-item clearfix" *ngFor="let hobby of hobbies; let i = index">
+				        {{hobby}}
+				        <button class="btn btn-danger pull-right" (click)="deleteHobby(i)">Remove</button>
+				    </li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+		    <div class="col-lg-8">
+			    <br />
+			    <label>Add a Hobby:</label>
+			    <br />
+
+				<div class="input-group">
+				   <input type="text" class="form-control" #hobby />
+				   <span class="input-group-btn">
+				        <button class="btn btn-primary" (click)="addHobby(hobby.value)">Add</button>
+				   </span>
+				</div>
+			    <br />
+			</div>
+		</div>
+	</div>
+</div>

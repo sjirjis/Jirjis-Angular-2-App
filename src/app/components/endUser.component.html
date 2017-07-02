@@ -1,0 +1,13 @@
+<div class="container">
+	<h3>End Users</h3>
+	<p>This page displays the results of a simple API call to JSONPlaceholder:</p>
+
+	<div class="col-lg-offset-2" *ngFor="let endUser of endUsers">
+		<div class="well col-lg-8">
+		  <h3>Name: {{endUser.name}}</h3>
+		  <p><strong>Phone: </strong>{{endUser.phone}}</p>
+		  <p><strong>Username: </strong>{{endUser.username}}</p>
+		  <p><strong>Website: </strong>{{endUser.website}}</p>
+		</div>
+	</div>
+</div>
