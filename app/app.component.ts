@@ -5,8 +5,9 @@ import { Component } from '@angular/core';
   template: `
   	  <navComponent></navComponent>
 	  <router-outlet></router-outlet>
-  `,
+  `
 })
+
 export class AppComponent  { 
 
 }

@@ -1,15 +1,22 @@
+// Get dependencies
 const express = require('express');
-const app = express();
 const path = require('path');
-const PORT = process.env.PORT || 8080;
+const http = require('http');
+const bodyParser = require('body-parser');
 
-app.use(express.static(__dirname + '/src'));
+const app = express();
 
-app.listen(PORT, function() {
-    console.log("App is running on port " + PORT);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(path.join(__dirname)));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/*', function(req, res){
-	res.sendFile(path.join(__dirname + '/src/index.html'));
-});
+const port = process.env.PORT || '3000';
+app.set('port', port);
 
+const server = http.createServer(app);
+server.listen(port, () => console.log(`API running on localhost:${port}`));
