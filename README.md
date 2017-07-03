@@ -1,6 +1,6 @@
-# Angular 2 in 60 Minutes
+# Angular 2 App
 
-This is the code for the 60 minutes tutorial. You can watch it <a href="https://www.youtube.com/watch?v=-zW1zHqsdyc">here</a>
+Originated from: <a href="https://www.youtube.com/watch?v=-zW1zHqsdyc">here</a>
 
 ## Prerequisites
 
